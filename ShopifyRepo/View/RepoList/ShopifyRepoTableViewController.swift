@@ -9,6 +9,8 @@
 import UIKit
 
 class ShopifyRepoTableViewController: UITableViewController {
+    
+    var task: URLSessionDataTaskProtocol?
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,16 @@ class ShopifyRepoTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        let service = GithubService(config: TokenRequestConfiguration(accessToken: "49a61c8fb522320f262a55175e48747fe44687a1"))
+        _ = service.repo(owner: "luisobo", completion: { (repositories) in
+            switch repositories {
+            case .failure(let error):
+                print(error)
+            case let .success(repos):
+                print(repos.count)
+            }
+        }, session: URLSession.shared)
     }
 
     // MARK: - Table view data source
