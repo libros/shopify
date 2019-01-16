@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		DB582C6521EECD270059F748 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB582C6421EECD270059F748 /* AppDelegate.swift */; };
-		DB582C6721EECD270059F748 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB582C6621EECD270059F748 /* ViewController.swift */; };
-		DB582C6A21EECD270059F748 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB582C6821EECD270059F748 /* Main.storyboard */; };
 		DB582C6C21EECD280059F748 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB582C6B21EECD280059F748 /* Assets.xcassets */; };
 		DB582C6F21EECD280059F748 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB582C6D21EECD280059F748 /* LaunchScreen.storyboard */; };
 		DB582C7A21EECD290059F748 /* ShopifyRepoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB582C7921EECD290059F748 /* ShopifyRepoTests.swift */; };
+		DB8BC81921EECEBF00DBA4D7 /* ShopifyRepoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC81721EECEBF00DBA4D7 /* ShopifyRepoTableViewController.swift */; };
+		DB8BC81A21EECEBF00DBA4D7 /* ShopifyRepoTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB8BC81821EECEBF00DBA4D7 /* ShopifyRepoTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +28,14 @@
 /* Begin PBXFileReference section */
 		DB582C6121EECD270059F748 /* ShopifyRepo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopifyRepo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB582C6421EECD270059F748 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB582C6621EECD270059F748 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DB582C6921EECD270059F748 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB582C6B21EECD280059F748 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB582C6E21EECD280059F748 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB582C7021EECD280059F748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB582C7521EECD290059F748 /* ShopifyRepoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopifyRepoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB582C7921EECD290059F748 /* ShopifyRepoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopifyRepoTests.swift; sourceTree = "<group>"; };
 		DB582C7B21EECD290059F748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB8BC81721EECEBF00DBA4D7 /* ShopifyRepoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopifyRepoTableViewController.swift; sourceTree = "<group>"; };
+		DB8BC81821EECEBF00DBA4D7 /* ShopifyRepoTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopifyRepoTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +56,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB0B5A7F21EED11000F0C730 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB0B5A8021EED11A00F0C730 /* RepoList */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB0B5A8021EED11A00F0C730 /* RepoList */ = {
+			isa = PBXGroup;
+			children = (
+				DB8BC81721EECEBF00DBA4D7 /* ShopifyRepoTableViewController.swift */,
+				DB8BC81821EECEBF00DBA4D7 /* ShopifyRepoTableViewController.xib */,
+			);
+			path = RepoList;
+			sourceTree = "<group>";
+		};
 		DB582C5821EECD270059F748 = {
 			isa = PBXGroup;
 			children = (
@@ -77,9 +94,8 @@
 		DB582C6321EECD270059F748 /* ShopifyRepo */ = {
 			isa = PBXGroup;
 			children = (
+				DB0B5A7F21EED11000F0C730 /* View */,
 				DB582C6421EECD270059F748 /* AppDelegate.swift */,
-				DB582C6621EECD270059F748 /* ViewController.swift */,
-				DB582C6821EECD270059F748 /* Main.storyboard */,
 				DB582C6B21EECD280059F748 /* Assets.xcassets */,
 				DB582C6D21EECD280059F748 /* LaunchScreen.storyboard */,
 				DB582C7021EECD280059F748 /* Info.plist */,
@@ -179,7 +195,7 @@
 			files = (
 				DB582C6F21EECD280059F748 /* LaunchScreen.storyboard in Resources */,
 				DB582C6C21EECD280059F748 /* Assets.xcassets in Resources */,
-				DB582C6A21EECD270059F748 /* Main.storyboard in Resources */,
+				DB8BC81A21EECEBF00DBA4D7 /* ShopifyRepoTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +213,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB582C6721EECD270059F748 /* ViewController.swift in Sources */,
 				DB582C6521EECD270059F748 /* AppDelegate.swift in Sources */,
+				DB8BC81921EECEBF00DBA4D7 /* ShopifyRepoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +237,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DB582C6821EECD270059F748 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB582C6921EECD270059F748 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DB582C6D21EECD280059F748 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -362,6 +370,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ShopifyRepo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,6 +388,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ShopifyRepo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
