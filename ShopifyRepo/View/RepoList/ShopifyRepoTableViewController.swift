@@ -21,13 +21,13 @@ class ShopifyRepoTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        let service = GithubService(config: TokenRequestConfiguration(accessToken: "49a61c8fb522320f262a55175e48747fe44687a1"))
-        _ = service.repo(owner: "luisobo", completion: { (repositories) in
+        let service = GithubService()
+        _ = service.repos(owner: "luisobo", completion: { (repositories) in
             switch repositories {
             case .failure(let error):
                 print(error)
             case let .success(repos):
-                print(repos.count)
+                print(repos.map { $0.fullName })
             }
         }, session: URLSession.shared)
     }

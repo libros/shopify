@@ -13,6 +13,7 @@ protocol BleedingFastURLSession {
 }
 
 extension URLSession: BleedingFastURLSession {
+    
     public func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
         return (dataTask(with: request, completionHandler: completionHandler) as URLSessionDataTask)
     }

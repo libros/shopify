@@ -9,10 +9,18 @@
 /* Begin PBXBuildFile section */
 		DB0B5A8521EED24F00F0C730 /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5A8421EED24F00F0C730 /* URLSessionDataTaskProtocol.swift */; };
 		DB0B5A8C21EEEBF500F0C730 /* BleedingFastURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5A8B21EEEBF500F0C730 /* BleedingFastURLSession.swift */; };
-		DB0B5A8E21EEEC3F00F0C730 /* RequestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5A8D21EEEC3F00F0C730 /* RequestConfiguration.swift */; };
-		DB0B5A9021EEED1500F0C730 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5A8F21EEED1500F0C730 /* Router.swift */; };
-		DB0B5A9C21EF3B7200F0C730 /* TokenRequestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5A9B21EF3B7200F0C730 /* TokenRequestConfiguration.swift */; };
+		DB0B5A9021EEED1500F0C730 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5A8F21EEED1500F0C730 /* Response.swift */; };
 		DB0B5A9E21EF3C1C00F0C730 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5A9D21EF3C1C00F0C730 /* GithubService.swift */; };
+		DB0B5AA121EFE2EF00F0C730 /* HTTPURLResponse+Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AA021EFE2EF00F0C730 /* HTTPURLResponse+Status.swift */; };
+		DB0B5AA321EFE32600F0C730 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AA221EFE32600F0C730 /* HTTPMethod.swift */; };
+		DB0B5AA821EFE3A100F0C730 /* RestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AA721EFE3A100F0C730 /* RestRequest.swift */; };
+		DB0B5AAA21EFE3C600F0C730 /* GithubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AA921EFE3C600F0C730 /* GithubRequest.swift */; };
+		DB0B5AAD21EFE3E600F0C730 /* RestRequestMethodDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AAC21EFE3E600F0C730 /* RestRequestMethodDecorator.swift */; };
+		DB0B5AAF21EFE3FE00F0C730 /* RestRequestURLQueryDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AAE21EFE3FE00F0C730 /* RestRequestURLQueryDecorator.swift */; };
+		DB0B5AB221EFE56D00F0C730 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AB121EFE56D00F0C730 /* Repository.swift */; };
+		DB0B5AB421EFE57E00F0C730 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AB321EFE57E00F0C730 /* User.swift */; };
+		DB0B5AB621EFE70600F0C730 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AB521EFE70600F0C730 /* DateFormatter.swift */; };
+		DB0B5AB821EFE87800F0C730 /* Rest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AB721EFE87800F0C730 /* Rest.swift */; };
 		DB582C6521EECD270059F748 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB582C6421EECD270059F748 /* AppDelegate.swift */; };
 		DB582C6C21EECD280059F748 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB582C6B21EECD280059F748 /* Assets.xcassets */; };
 		DB582C6F21EECD280059F748 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB582C6D21EECD280059F748 /* LaunchScreen.storyboard */; };
@@ -34,10 +42,18 @@
 /* Begin PBXFileReference section */
 		DB0B5A8421EED24F00F0C730 /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
 		DB0B5A8B21EEEBF500F0C730 /* BleedingFastURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleedingFastURLSession.swift; sourceTree = "<group>"; };
-		DB0B5A8D21EEEC3F00F0C730 /* RequestConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConfiguration.swift; sourceTree = "<group>"; };
-		DB0B5A8F21EEED1500F0C730 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		DB0B5A9B21EF3B7200F0C730 /* TokenRequestConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRequestConfiguration.swift; sourceTree = "<group>"; };
+		DB0B5A8F21EEED1500F0C730 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		DB0B5A9D21EF3C1C00F0C730 /* GithubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
+		DB0B5AA021EFE2EF00F0C730 /* HTTPURLResponse+Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Status.swift"; sourceTree = "<group>"; };
+		DB0B5AA221EFE32600F0C730 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		DB0B5AA721EFE3A100F0C730 /* RestRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRequest.swift; sourceTree = "<group>"; };
+		DB0B5AA921EFE3C600F0C730 /* GithubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRequest.swift; sourceTree = "<group>"; };
+		DB0B5AAC21EFE3E600F0C730 /* RestRequestMethodDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRequestMethodDecorator.swift; sourceTree = "<group>"; };
+		DB0B5AAE21EFE3FE00F0C730 /* RestRequestURLQueryDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRequestURLQueryDecorator.swift; sourceTree = "<group>"; };
+		DB0B5AB121EFE56D00F0C730 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		DB0B5AB321EFE57E00F0C730 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DB0B5AB521EFE70600F0C730 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		DB0B5AB721EFE87800F0C730 /* Rest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rest.swift; sourceTree = "<group>"; };
 		DB582C6121EECD270059F748 /* ShopifyRepo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopifyRepo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB582C6421EECD270059F748 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB582C6B21EECD280059F748 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,21 +111,70 @@
 		DB0B5A8321EED21200F0C730 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				DB0B5A8421EED24F00F0C730 /* URLSessionDataTaskProtocol.swift */,
-				DB0B5A8D21EEEC3F00F0C730 /* RequestConfiguration.swift */,
-				DB0B5A8F21EEED1500F0C730 /* Router.swift */,
-				DB0B5A8B21EEEBF500F0C730 /* BleedingFastURLSession.swift */,
-				DB0B5A9B21EF3B7200F0C730 /* TokenRequestConfiguration.swift */,
+				DB0B5AA621EFE36300F0C730 /* request */,
+				DB0B5AA521EFE33E00F0C730 /* protocols */,
+				DB0B5AA421EFE32F00F0C730 /* enums */,
+				DB0B5A9F21EFE2C700F0C730 /* extension */,
 				DB0B5A9D21EF3C1C00F0C730 /* GithubService.swift */,
+				DB0B5AB721EFE87800F0C730 /* Rest.swift */,
+				DB0B5AB021EFE53700F0C730 /* model */,
 			);
 			path = Service;
 			sourceTree = "<group>";
 		};
-		DB0B5A8A21EEE87A00F0C730 /* Rest */ = {
+		DB0B5A9F21EFE2C700F0C730 /* extension */ = {
 			isa = PBXGroup;
 			children = (
+				DB0B5AA021EFE2EF00F0C730 /* HTTPURLResponse+Status.swift */,
+				DB0B5AB521EFE70600F0C730 /* DateFormatter.swift */,
 			);
-			path = Rest;
+			path = extension;
+			sourceTree = "<group>";
+		};
+		DB0B5AA421EFE32F00F0C730 /* enums */ = {
+			isa = PBXGroup;
+			children = (
+				DB0B5A8F21EEED1500F0C730 /* Response.swift */,
+				DB0B5AA221EFE32600F0C730 /* HTTPMethod.swift */,
+			);
+			path = enums;
+			sourceTree = "<group>";
+		};
+		DB0B5AA521EFE33E00F0C730 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DB0B5A8B21EEEBF500F0C730 /* BleedingFastURLSession.swift */,
+				DB0B5A8421EED24F00F0C730 /* URLSessionDataTaskProtocol.swift */,
+				DB0B5AA721EFE3A100F0C730 /* RestRequest.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		DB0B5AA621EFE36300F0C730 /* request */ = {
+			isa = PBXGroup;
+			children = (
+				DB0B5AAB21EFE3D500F0C730 /* decorator */,
+				DB0B5AA921EFE3C600F0C730 /* GithubRequest.swift */,
+			);
+			path = request;
+			sourceTree = "<group>";
+		};
+		DB0B5AAB21EFE3D500F0C730 /* decorator */ = {
+			isa = PBXGroup;
+			children = (
+				DB0B5AAC21EFE3E600F0C730 /* RestRequestMethodDecorator.swift */,
+				DB0B5AAE21EFE3FE00F0C730 /* RestRequestURLQueryDecorator.swift */,
+			);
+			path = decorator;
+			sourceTree = "<group>";
+		};
+		DB0B5AB021EFE53700F0C730 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DB0B5AB121EFE56D00F0C730 /* Repository.swift */,
+				DB0B5AB321EFE57E00F0C730 /* User.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		DB582C5821EECD270059F748 = {
@@ -133,7 +198,6 @@
 		DB582C6321EECD270059F748 /* ShopifyRepo */ = {
 			isa = PBXGroup;
 			children = (
-				DB0B5A8A21EEE87A00F0C730 /* Rest */,
 				DB0B5A8321EED21200F0C730 /* Service */,
 				DB0B5A8121EED1F800F0C730 /* Model */,
 				DB0B5A7F21EED11000F0C730 /* View */,
@@ -255,13 +319,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0B5AAD21EFE3E600F0C730 /* RestRequestMethodDecorator.swift in Sources */,
+				DB0B5AA121EFE2EF00F0C730 /* HTTPURLResponse+Status.swift in Sources */,
+				DB0B5AA821EFE3A100F0C730 /* RestRequest.swift in Sources */,
+				DB0B5AB821EFE87800F0C730 /* Rest.swift in Sources */,
+				DB0B5AB221EFE56D00F0C730 /* Repository.swift in Sources */,
 				DB582C6521EECD270059F748 /* AppDelegate.swift in Sources */,
 				DB8BC81921EECEBF00DBA4D7 /* ShopifyRepoTableViewController.swift in Sources */,
+				DB0B5AB421EFE57E00F0C730 /* User.swift in Sources */,
 				DB0B5A9E21EF3C1C00F0C730 /* GithubService.swift in Sources */,
 				DB0B5A8C21EEEBF500F0C730 /* BleedingFastURLSession.swift in Sources */,
-				DB0B5A8E21EEEC3F00F0C730 /* RequestConfiguration.swift in Sources */,
-				DB0B5A9021EEED1500F0C730 /* Router.swift in Sources */,
-				DB0B5A9C21EF3B7200F0C730 /* TokenRequestConfiguration.swift in Sources */,
+				DB0B5AB621EFE70600F0C730 /* DateFormatter.swift in Sources */,
+				DB0B5AAF21EFE3FE00F0C730 /* RestRequestURLQueryDecorator.swift in Sources */,
+				DB0B5AA321EFE32600F0C730 /* HTTPMethod.swift in Sources */,
+				DB0B5AAA21EFE3C600F0C730 /* GithubRequest.swift in Sources */,
+				DB0B5A9021EEED1500F0C730 /* Response.swift in Sources */,
 				DB0B5A8521EED24F00F0C730 /* URLSessionDataTaskProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
