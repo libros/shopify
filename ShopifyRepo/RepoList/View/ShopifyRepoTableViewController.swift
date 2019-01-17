@@ -16,6 +16,8 @@ class ShopifyRepoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "GitHub Repositories"
+        
         tableView.delegate = dataDelegate
         tableView.dataSource = dataDelegate
         tableView.estimatedRowHeight = 60

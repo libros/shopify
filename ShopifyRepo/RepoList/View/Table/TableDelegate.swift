@@ -11,29 +11,39 @@ import UIKit
 
 class RepoTableData: NSObject {
     
-    var repositories: [Repository]
+    private var sortedRepositories: [Repository] = []
+    
+    var repositories: [Repository] {
+        set {
+            sortedRepositories = newValue.sorted {
+                let sameStar = ($0.stargazersCount ?? 0) == ($1.stargazersCount ?? 0)
+                if sameStar {
+                    return $0.name ?? "" < $1.name ?? ""
+                }
+                return ($0.stargazersCount ?? 0) > ($1.stargazersCount ?? 0)
+            }
+        }
+        get {
+            return sortedRepositories
+        }
+    }
     
     override init() {
-        repositories = []
+        sortedRepositories = []
     }
 }
 
-extension RepoTableData: UITableViewDelegate {
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 60
-//    }
-}
+extension RepoTableData: UITableViewDelegate {}
 
 extension RepoTableData: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return repositories.count
+        return sortedRepositories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(RepoTableViewCell.self)", for: indexPath) as! RepoTableViewCell
-        cell.config(with: repositories[indexPath.row])
+        cell.config(with: sortedRepositories[indexPath.row])
         return cell
     }
     
