@@ -8,21 +8,25 @@
 
 import Foundation
 
-struct Repository: Codable {
-    private(set) var id: Int = -1
-    private(set) var owner = User()
-    var name: String?
-    var fullName: String?
-    private(set) var isPrivate: Bool = false
-    var repositoryDescription: String?
-    private(set) var isFork: Bool = false
-    var gitURL: String?
-    var sshURL: String?
-    var cloneURL: String?
-    var htmlURL: String?
-    private(set) var size: Int = -1
-    var lastPush: Date?
+struct Repository {
     
+    let id: Int = -1
+    let owner: User?
+    let name: String?
+    let fullName: String?
+    let isPrivate: Bool?
+    let repositoryDescription: String?
+    let isFork: Bool?
+    let gitURL: String?
+    let sshURL: String?
+    let cloneURL: String?
+    let htmlURL: String?
+    let size: Int?
+    let lastPush: Date?
+}
+
+extension Repository: Codable {
+
     enum CodingKeys: String, CodingKey {
         case id
         case owner

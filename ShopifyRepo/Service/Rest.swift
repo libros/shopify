@@ -10,7 +10,11 @@ import Foundation
 
 enum Rest {
     
-    static func load<T: Codable>(request: RestRequest, session: BleedingFastURLSession = URLSession.shared, dateDecodingStrategy: JSONDecoder.DateDecodingStrategy?, expectedResultType: T.Type, completion: @escaping (_ json: T?, _ error: Error?) -> Void) -> URLSessionDataTaskProtocol? {
+    static func load<T: Codable>(request: RestRequest,
+                                 session: BleedingFastURLSession = URLSession.shared,
+                                 dateDecodingStrategy: JSONDecoder.DateDecodingStrategy?,
+                                 expectedResultType: T.Type,
+                                 completion: @escaping (_ json: T?, _ error: Error?) -> Void) -> URLSessionDataTaskProtocol? {
         let decoder = JSONDecoder()
         if let dateDecodingStrategy = dateDecodingStrategy {
             decoder.dateDecodingStrategy = dateDecodingStrategy

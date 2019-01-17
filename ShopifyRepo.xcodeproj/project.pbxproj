@@ -17,8 +17,6 @@
 		DB0B5AAA21EFE3C600F0C730 /* GithubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AA921EFE3C600F0C730 /* GithubRequest.swift */; };
 		DB0B5AAD21EFE3E600F0C730 /* RestRequestMethodDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AAC21EFE3E600F0C730 /* RestRequestMethodDecorator.swift */; };
 		DB0B5AAF21EFE3FE00F0C730 /* RestRequestURLQueryDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AAE21EFE3FE00F0C730 /* RestRequestURLQueryDecorator.swift */; };
-		DB0B5AB221EFE56D00F0C730 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AB121EFE56D00F0C730 /* Repository.swift */; };
-		DB0B5AB421EFE57E00F0C730 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AB321EFE57E00F0C730 /* User.swift */; };
 		DB0B5AB621EFE70600F0C730 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AB521EFE70600F0C730 /* DateFormatter.swift */; };
 		DB0B5AB821EFE87800F0C730 /* Rest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AB721EFE87800F0C730 /* Rest.swift */; };
 		DB582C6521EECD270059F748 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB582C6421EECD270059F748 /* AppDelegate.swift */; };
@@ -27,6 +25,8 @@
 		DB582C7A21EECD290059F748 /* ShopifyRepoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB582C7921EECD290059F748 /* ShopifyRepoTests.swift */; };
 		DB8BC81921EECEBF00DBA4D7 /* ShopifyRepoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC81721EECEBF00DBA4D7 /* ShopifyRepoTableViewController.swift */; };
 		DB8BC81A21EECEBF00DBA4D7 /* ShopifyRepoTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB8BC81821EECEBF00DBA4D7 /* ShopifyRepoTableViewController.xib */; };
+		DBD89F6721F005AE00012A9A /* User+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD89F6521F005AE00012A9A /* User+Decodable.swift */; };
+		DBD89F6821F005AE00012A9A /* Repository+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD89F6621F005AE00012A9A /* Repository+Decodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +50,6 @@
 		DB0B5AA921EFE3C600F0C730 /* GithubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRequest.swift; sourceTree = "<group>"; };
 		DB0B5AAC21EFE3E600F0C730 /* RestRequestMethodDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRequestMethodDecorator.swift; sourceTree = "<group>"; };
 		DB0B5AAE21EFE3FE00F0C730 /* RestRequestURLQueryDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRequestURLQueryDecorator.swift; sourceTree = "<group>"; };
-		DB0B5AB121EFE56D00F0C730 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		DB0B5AB321EFE57E00F0C730 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DB0B5AB521EFE70600F0C730 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		DB0B5AB721EFE87800F0C730 /* Rest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rest.swift; sourceTree = "<group>"; };
 		DB582C6121EECD270059F748 /* ShopifyRepo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopifyRepo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +62,8 @@
 		DB582C7B21EECD290059F748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB8BC81721EECEBF00DBA4D7 /* ShopifyRepoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopifyRepoTableViewController.swift; sourceTree = "<group>"; };
 		DB8BC81821EECEBF00DBA4D7 /* ShopifyRepoTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopifyRepoTableViewController.xib; sourceTree = "<group>"; };
+		DBD89F6521F005AE00012A9A /* User+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+Decodable.swift"; sourceTree = "<group>"; };
+		DBD89F6621F005AE00012A9A /* Repository+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Repository+Decodable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +99,6 @@
 				DB8BC81821EECEBF00DBA4D7 /* ShopifyRepoTableViewController.xib */,
 			);
 			path = RepoList;
-			sourceTree = "<group>";
-		};
-		DB0B5A8121EED1F800F0C730 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		DB0B5A8321EED21200F0C730 /* Service */ = {
@@ -171,8 +164,8 @@
 		DB0B5AB021EFE53700F0C730 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				DB0B5AB121EFE56D00F0C730 /* Repository.swift */,
-				DB0B5AB321EFE57E00F0C730 /* User.swift */,
+				DBD89F6621F005AE00012A9A /* Repository+Decodable.swift */,
+				DBD89F6521F005AE00012A9A /* User+Decodable.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -199,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				DB0B5A8321EED21200F0C730 /* Service */,
-				DB0B5A8121EED1F800F0C730 /* Model */,
 				DB0B5A7F21EED11000F0C730 /* View */,
 				DB582C6421EECD270059F748 /* AppDelegate.swift */,
 				DB582C6B21EECD280059F748 /* Assets.xcassets */,
@@ -323,11 +315,10 @@
 				DB0B5AA121EFE2EF00F0C730 /* HTTPURLResponse+Status.swift in Sources */,
 				DB0B5AA821EFE3A100F0C730 /* RestRequest.swift in Sources */,
 				DB0B5AB821EFE87800F0C730 /* Rest.swift in Sources */,
-				DB0B5AB221EFE56D00F0C730 /* Repository.swift in Sources */,
 				DB582C6521EECD270059F748 /* AppDelegate.swift in Sources */,
 				DB8BC81921EECEBF00DBA4D7 /* ShopifyRepoTableViewController.swift in Sources */,
-				DB0B5AB421EFE57E00F0C730 /* User.swift in Sources */,
 				DB0B5A9E21EF3C1C00F0C730 /* GithubService.swift in Sources */,
+				DBD89F6721F005AE00012A9A /* User+Decodable.swift in Sources */,
 				DB0B5A8C21EEEBF500F0C730 /* BleedingFastURLSession.swift in Sources */,
 				DB0B5AB621EFE70600F0C730 /* DateFormatter.swift in Sources */,
 				DB0B5AAF21EFE3FE00F0C730 /* RestRequestURLQueryDecorator.swift in Sources */,
@@ -335,6 +326,7 @@
 				DB0B5AAA21EFE3C600F0C730 /* GithubRequest.swift in Sources */,
 				DB0B5A9021EEED1500F0C730 /* Response.swift in Sources */,
 				DB0B5A8521EED24F00F0C730 /* URLSessionDataTaskProtocol.swift in Sources */,
+				DBD89F6821F005AE00012A9A /* Repository+Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

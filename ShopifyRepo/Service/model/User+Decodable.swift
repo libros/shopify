@@ -8,20 +8,23 @@
 
 import Foundation
 
-class User: Codable {
-    private(set) var id: Int = -1
-    var login: String?
-    var avatarURL: String?
-    var gravatarID: String?
-    var type: String?
-    var name: String?
-    var company: String?
-    var blog: String?
-    var location: String?
-    var email: String?
-    var numberOfPublicRepos: Int?
-    var numberOfPublicGists: Int?
-    var numberOfPrivateRepos: Int?
+struct User {
+    let id: Int?
+    let login: String?
+    let avatarURL: String?
+    let gravatarID: String?
+    let type: String?
+    let name: String?
+    let company: String?
+    let blog: String?
+    let location: String?
+    let email: String?
+    let numberOfPublicRepos: Int?
+    let numberOfPublicGists: Int?
+    let numberOfPrivateRepos: Int?
+}
+
+extension User: Codable {
     
     enum CodingKeys: String, CodingKey {
         case id
