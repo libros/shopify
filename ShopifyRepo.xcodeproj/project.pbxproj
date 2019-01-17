@@ -7,12 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB0B5A8521EED24F00F0C730 /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5A8421EED24F00F0C730 /* URLSessionDataTaskProtocol.swift */; };
+		DB0B5A8C21EEEBF500F0C730 /* BleedingFastURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5A8B21EEEBF500F0C730 /* BleedingFastURLSession.swift */; };
+		DB0B5A9021EEED1500F0C730 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5A8F21EEED1500F0C730 /* Response.swift */; };
+		DB0B5A9E21EF3C1C00F0C730 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5A9D21EF3C1C00F0C730 /* GithubService.swift */; };
+		DB0B5AA121EFE2EF00F0C730 /* HTTPURLResponse+Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AA021EFE2EF00F0C730 /* HTTPURLResponse+Status.swift */; };
+		DB0B5AA321EFE32600F0C730 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AA221EFE32600F0C730 /* HTTPMethod.swift */; };
+		DB0B5AA821EFE3A100F0C730 /* RestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AA721EFE3A100F0C730 /* RestRequest.swift */; };
+		DB0B5AAA21EFE3C600F0C730 /* GithubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AA921EFE3C600F0C730 /* GithubRequest.swift */; };
+		DB0B5AAD21EFE3E600F0C730 /* RestRequestMethodDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AAC21EFE3E600F0C730 /* RestRequestMethodDecorator.swift */; };
+		DB0B5AAF21EFE3FE00F0C730 /* RestRequestURLQueryDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AAE21EFE3FE00F0C730 /* RestRequestURLQueryDecorator.swift */; };
+		DB0B5AB621EFE70600F0C730 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AB521EFE70600F0C730 /* DateFormatter.swift */; };
+		DB0B5AB821EFE87800F0C730 /* Rest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B5AB721EFE87800F0C730 /* Rest.swift */; };
 		DB582C6521EECD270059F748 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB582C6421EECD270059F748 /* AppDelegate.swift */; };
-		DB582C6721EECD270059F748 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB582C6621EECD270059F748 /* ViewController.swift */; };
-		DB582C6A21EECD270059F748 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB582C6821EECD270059F748 /* Main.storyboard */; };
 		DB582C6C21EECD280059F748 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB582C6B21EECD280059F748 /* Assets.xcassets */; };
 		DB582C6F21EECD280059F748 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB582C6D21EECD280059F748 /* LaunchScreen.storyboard */; };
 		DB582C7A21EECD290059F748 /* ShopifyRepoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB582C7921EECD290059F748 /* ShopifyRepoTests.swift */; };
+		DB8BC81921EECEBF00DBA4D7 /* ShopifyRepoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC81721EECEBF00DBA4D7 /* ShopifyRepoTableViewController.swift */; };
+		DB8BC81A21EECEBF00DBA4D7 /* ShopifyRepoTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB8BC81821EECEBF00DBA4D7 /* ShopifyRepoTableViewController.xib */; };
+		DBD89F6721F005AE00012A9A /* User+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD89F6521F005AE00012A9A /* User+Decodable.swift */; };
+		DBD89F6821F005AE00012A9A /* Repository+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD89F6621F005AE00012A9A /* Repository+Decodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +40,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB0B5A8421EED24F00F0C730 /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
+		DB0B5A8B21EEEBF500F0C730 /* BleedingFastURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleedingFastURLSession.swift; sourceTree = "<group>"; };
+		DB0B5A8F21EEED1500F0C730 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		DB0B5A9D21EF3C1C00F0C730 /* GithubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
+		DB0B5AA021EFE2EF00F0C730 /* HTTPURLResponse+Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Status.swift"; sourceTree = "<group>"; };
+		DB0B5AA221EFE32600F0C730 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		DB0B5AA721EFE3A100F0C730 /* RestRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRequest.swift; sourceTree = "<group>"; };
+		DB0B5AA921EFE3C600F0C730 /* GithubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRequest.swift; sourceTree = "<group>"; };
+		DB0B5AAC21EFE3E600F0C730 /* RestRequestMethodDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRequestMethodDecorator.swift; sourceTree = "<group>"; };
+		DB0B5AAE21EFE3FE00F0C730 /* RestRequestURLQueryDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRequestURLQueryDecorator.swift; sourceTree = "<group>"; };
+		DB0B5AB521EFE70600F0C730 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		DB0B5AB721EFE87800F0C730 /* Rest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rest.swift; sourceTree = "<group>"; };
 		DB582C6121EECD270059F748 /* ShopifyRepo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopifyRepo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB582C6421EECD270059F748 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB582C6621EECD270059F748 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DB582C6921EECD270059F748 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB582C6B21EECD280059F748 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB582C6E21EECD280059F748 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB582C7021EECD280059F748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB582C7521EECD290059F748 /* ShopifyRepoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopifyRepoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB582C7921EECD290059F748 /* ShopifyRepoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopifyRepoTests.swift; sourceTree = "<group>"; };
 		DB582C7B21EECD290059F748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB8BC81721EECEBF00DBA4D7 /* ShopifyRepoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopifyRepoTableViewController.swift; sourceTree = "<group>"; };
+		DB8BC81821EECEBF00DBA4D7 /* ShopifyRepoTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopifyRepoTableViewController.xib; sourceTree = "<group>"; };
+		DBD89F6521F005AE00012A9A /* User+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+Decodable.swift"; sourceTree = "<group>"; };
+		DBD89F6621F005AE00012A9A /* Repository+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Repository+Decodable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +84,92 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB0B5A7F21EED11000F0C730 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB0B5A8021EED11A00F0C730 /* RepoList */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB0B5A8021EED11A00F0C730 /* RepoList */ = {
+			isa = PBXGroup;
+			children = (
+				DB8BC81721EECEBF00DBA4D7 /* ShopifyRepoTableViewController.swift */,
+				DB8BC81821EECEBF00DBA4D7 /* ShopifyRepoTableViewController.xib */,
+			);
+			path = RepoList;
+			sourceTree = "<group>";
+		};
+		DB0B5A8321EED21200F0C730 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DB0B5AA621EFE36300F0C730 /* request */,
+				DB0B5AA521EFE33E00F0C730 /* protocols */,
+				DB0B5AA421EFE32F00F0C730 /* enums */,
+				DB0B5A9F21EFE2C700F0C730 /* extension */,
+				DB0B5A9D21EF3C1C00F0C730 /* GithubService.swift */,
+				DB0B5AB721EFE87800F0C730 /* Rest.swift */,
+				DB0B5AB021EFE53700F0C730 /* model */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DB0B5A9F21EFE2C700F0C730 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				DB0B5AA021EFE2EF00F0C730 /* HTTPURLResponse+Status.swift */,
+				DB0B5AB521EFE70600F0C730 /* DateFormatter.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		DB0B5AA421EFE32F00F0C730 /* enums */ = {
+			isa = PBXGroup;
+			children = (
+				DB0B5A8F21EEED1500F0C730 /* Response.swift */,
+				DB0B5AA221EFE32600F0C730 /* HTTPMethod.swift */,
+			);
+			path = enums;
+			sourceTree = "<group>";
+		};
+		DB0B5AA521EFE33E00F0C730 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DB0B5A8B21EEEBF500F0C730 /* BleedingFastURLSession.swift */,
+				DB0B5A8421EED24F00F0C730 /* URLSessionDataTaskProtocol.swift */,
+				DB0B5AA721EFE3A100F0C730 /* RestRequest.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		DB0B5AA621EFE36300F0C730 /* request */ = {
+			isa = PBXGroup;
+			children = (
+				DB0B5AAB21EFE3D500F0C730 /* decorator */,
+				DB0B5AA921EFE3C600F0C730 /* GithubRequest.swift */,
+			);
+			path = request;
+			sourceTree = "<group>";
+		};
+		DB0B5AAB21EFE3D500F0C730 /* decorator */ = {
+			isa = PBXGroup;
+			children = (
+				DB0B5AAC21EFE3E600F0C730 /* RestRequestMethodDecorator.swift */,
+				DB0B5AAE21EFE3FE00F0C730 /* RestRequestURLQueryDecorator.swift */,
+			);
+			path = decorator;
+			sourceTree = "<group>";
+		};
+		DB0B5AB021EFE53700F0C730 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DBD89F6621F005AE00012A9A /* Repository+Decodable.swift */,
+				DBD89F6521F005AE00012A9A /* User+Decodable.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		DB582C5821EECD270059F748 = {
 			isa = PBXGroup;
 			children = (
@@ -77,9 +191,9 @@
 		DB582C6321EECD270059F748 /* ShopifyRepo */ = {
 			isa = PBXGroup;
 			children = (
+				DB0B5A8321EED21200F0C730 /* Service */,
+				DB0B5A7F21EED11000F0C730 /* View */,
 				DB582C6421EECD270059F748 /* AppDelegate.swift */,
-				DB582C6621EECD270059F748 /* ViewController.swift */,
-				DB582C6821EECD270059F748 /* Main.storyboard */,
 				DB582C6B21EECD280059F748 /* Assets.xcassets */,
 				DB582C6D21EECD280059F748 /* LaunchScreen.storyboard */,
 				DB582C7021EECD280059F748 /* Info.plist */,
@@ -179,7 +293,7 @@
 			files = (
 				DB582C6F21EECD280059F748 /* LaunchScreen.storyboard in Resources */,
 				DB582C6C21EECD280059F748 /* Assets.xcassets in Resources */,
-				DB582C6A21EECD270059F748 /* Main.storyboard in Resources */,
+				DB8BC81A21EECEBF00DBA4D7 /* ShopifyRepoTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +311,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB582C6721EECD270059F748 /* ViewController.swift in Sources */,
+				DB0B5AAD21EFE3E600F0C730 /* RestRequestMethodDecorator.swift in Sources */,
+				DB0B5AA121EFE2EF00F0C730 /* HTTPURLResponse+Status.swift in Sources */,
+				DB0B5AA821EFE3A100F0C730 /* RestRequest.swift in Sources */,
+				DB0B5AB821EFE87800F0C730 /* Rest.swift in Sources */,
 				DB582C6521EECD270059F748 /* AppDelegate.swift in Sources */,
+				DB8BC81921EECEBF00DBA4D7 /* ShopifyRepoTableViewController.swift in Sources */,
+				DB0B5A9E21EF3C1C00F0C730 /* GithubService.swift in Sources */,
+				DBD89F6721F005AE00012A9A /* User+Decodable.swift in Sources */,
+				DB0B5A8C21EEEBF500F0C730 /* BleedingFastURLSession.swift in Sources */,
+				DB0B5AB621EFE70600F0C730 /* DateFormatter.swift in Sources */,
+				DB0B5AAF21EFE3FE00F0C730 /* RestRequestURLQueryDecorator.swift in Sources */,
+				DB0B5AA321EFE32600F0C730 /* HTTPMethod.swift in Sources */,
+				DB0B5AAA21EFE3C600F0C730 /* GithubRequest.swift in Sources */,
+				DB0B5A9021EEED1500F0C730 /* Response.swift in Sources */,
+				DB0B5A8521EED24F00F0C730 /* URLSessionDataTaskProtocol.swift in Sources */,
+				DBD89F6821F005AE00012A9A /* Repository+Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +349,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DB582C6821EECD270059F748 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB582C6921EECD270059F748 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DB582C6D21EECD280059F748 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -362,6 +482,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ShopifyRepo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,6 +500,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ShopifyRepo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
