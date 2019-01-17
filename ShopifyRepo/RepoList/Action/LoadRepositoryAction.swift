@@ -25,6 +25,5 @@ func fetchGithubRepositories(state: AppState, store: Store<AppState>) -> Action?
             }
         }, session: URLSession.shared)
     }
-    
     return RepositoryLoadedAction(repositories: nil, error: nil, inProgress: true)
 }
