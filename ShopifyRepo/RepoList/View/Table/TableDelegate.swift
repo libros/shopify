@@ -33,7 +33,16 @@ class RepoTableData: NSObject {
     }
 }
 
-extension RepoTableData: UITableViewDelegate {}
+extension RepoTableData: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedRepo = sortedRepositories[indexPath.row]
+        guard let htmlURLString = selectedRepo.htmlURL,
+            let htmlURL = URL(string: htmlURLString) else {
+            return
+        }
+        UIApplication.shared.open(htmlURL, options: [:], completionHandler: nil)
+    }
+}
 
 extension RepoTableData: UITableViewDataSource {
     
@@ -46,5 +55,4 @@ extension RepoTableData: UITableViewDataSource {
         cell.config(with: sortedRepositories[indexPath.row])
         return cell
     }
-    
 }
