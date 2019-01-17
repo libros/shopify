@@ -11,16 +11,16 @@ import UIKit
 
 class RepoTableData: NSObject {
     
-    private var sortedRepositories: [Repository] = []
+    private var sortedRepositories: [RepoTableCellModel] = []
     
-    var repositories: [Repository] {
+    var repositories: [RepoTableCellModel] {
         set {
             sortedRepositories = newValue.sorted {
-                let sameStar = ($0.stargazersCount ?? 0) == ($1.stargazersCount ?? 0)
+                let sameStar = ($0.stars) == ($1.stars)
                 if sameStar {
-                    return $0.name ?? "" < $1.name ?? ""
+                    return $0.name < $1.name
                 }
-                return ($0.stargazersCount ?? 0) > ($1.stargazersCount ?? 0)
+                return ($0.stars) > ($1.stars)
             }
         }
         get {
@@ -36,8 +36,7 @@ class RepoTableData: NSObject {
 extension RepoTableData: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedRepo = sortedRepositories[indexPath.row]
-        guard let htmlURLString = selectedRepo.htmlURL,
-            let htmlURL = URL(string: htmlURLString) else {
+        guard let htmlURL = URL(string: selectedRepo.url) else {
             return
         }
         store.dispatch(OpenURLAction(url: htmlURL))

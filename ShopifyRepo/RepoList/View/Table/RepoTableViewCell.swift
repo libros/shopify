@@ -14,19 +14,17 @@ class RepoTableViewCell: UITableViewCell {
     @IBOutlet weak var timeCreatedLabel: UILabel!
     @IBOutlet weak var startNumberLabel: UILabel!
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    func config(with repo: RepoTableCellModel) {
+        mainLabel.text = "\(repo.name)" + (repo.isFork ? "🍴" : "")
+        timeCreatedLabel.text = DateFormatter.simpleDate.string(from: repo.createdDate)
+        startNumberLabel.text = "\(repo.stars) 🌟"
     }
-    
-    func config(with repo: Repository) {
-        if repo.isFork == true {
-            mainLabel.text = "\(repo.name!)🍴"
-        } else {
-            mainLabel.text = repo.name
-        }
-        
-        timeCreatedLabel.text = "\(repo.createdTime!)"
-        startNumberLabel.text = "\(repo.stargazersCount!) 🌟"
-    }
+}
+
+extension DateFormatter {
+    static let simpleDate: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter
+    }()
 }

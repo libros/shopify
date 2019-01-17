@@ -33,7 +33,7 @@ class ShopifyRepoTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "GitHub Repositories"
+        title = "Shopify Repositories"
         
         {(tableView: UITableView) in
             tableView.refreshControl = UIRefreshControl()
@@ -75,7 +75,12 @@ extension ShopifyRepoTableViewController: StoreSubscriber {
         switch state.repositoryStatus {
         case .success(let repos):
             configDisplay(tableView: tableView, indicatorView: indicatorView, backgroundView: statefulBackgroundView)
-            dataDelegate.repositories = repos
+            dataDelegate.repositories = repos.compactMap { (repo) -> RepoTableCellModel? in
+                guard let name = repo.name, let url = repo.htmlURL, let isFork = repo.isFork, let createdDate = repo.createdTime, let starCount = repo.stargazersCount else {
+                    return nil
+                }
+                return RepoTableCellModel(name: name, url: url, isFork: isFork, createdDate: createdDate, stars: starCount)
+            }
             tableView.reloadData()
         case .failure:
             configError(tableView: tableView, indicatorView: indicatorView, backgroundView: statefulBackgroundView)
