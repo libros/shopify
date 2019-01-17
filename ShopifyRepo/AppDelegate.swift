@@ -7,6 +7,12 @@
 //
 
 import UIKit
+import ReSwift
+
+
+/// Create the store in the global namespace before anything else created.
+/// Store is basically the combination of state of the app, and reducers embraces actions and update states.
+let store = Store<AppState>(reducer: appReducer, state: nil)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let shopifyRepoTableView = ShopifyRepoTableViewController(nibName: "\(ShopifyRepoTableViewController.self)", bundle: nil)
         window?.rootViewController = UINavigationController(rootViewController: shopifyRepoTableView)
         window?.makeKeyAndVisible()
+        
+        
         return true
     }
 

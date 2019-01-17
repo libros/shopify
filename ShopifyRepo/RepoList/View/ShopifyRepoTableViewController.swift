@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReSwift
 
 class ShopifyRepoTableViewController: UITableViewController {
     
@@ -20,16 +21,13 @@ class ShopifyRepoTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-        let service = GithubService()
-        _ = service.repos(owner: "luisobo", completion: { (repositories) in
-            switch repositories {
-            case .failure(let error):
-                print(error)
-            case let .success(repos):
-                print(repos.map { $0.fullName })
+
+        store.subscribe(self) { (subscription: Subscription<AppState>) -> Subscription<RepositoryScreenState> in
+            subscription.select { (appState) in
+                appState.repositoryScreenState
             }
-        }, session: URLSession.shared)
+        }
+        store.dispatch(fetchGithubRepositories)
     }
 
     // MARK: - Table view data source
@@ -99,4 +97,11 @@ class ShopifyRepoTableViewController: UITableViewController {
     }
     */
     
+}
+
+extension ShopifyRepoTableViewController: StoreSubscriber {
+    
+    func newState(state: RepositoryScreenState) {
+        print(state)
+    }
 }
