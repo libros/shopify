@@ -37,6 +37,7 @@
 		DBD89F7D21F01BE800012A9A /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD89F7C21F01BE800012A9A /* AppState.swift */; };
 		DBD89F8021F01D8700012A9A /* RepositoryReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD89F7F21F01D8700012A9A /* RepositoryReducer.swift */; };
 		DBD89F8221F01E1500012A9A /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD89F8121F01E1500012A9A /* AppReducer.swift */; };
+		DBF5612421F0B61D00CC3206 /* OpenURLAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF5612321F0B61D00CC3206 /* OpenURLAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		DBD89F7C21F01BE800012A9A /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		DBD89F7F21F01D8700012A9A /* RepositoryReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryReducer.swift; sourceTree = "<group>"; };
 		DBD89F8121F01E1500012A9A /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		DBF5612321F0B61D00CC3206 /* OpenURLAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenURLAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +274,7 @@
 			children = (
 				DBD89F7821F01AA600012A9A /* LoadRepositoryAction.swift */,
 				DBD89F7A21F01BAB00012A9A /* RepositoriesLoadedAction.swift */,
+				DBF5612321F0B61D00CC3206 /* OpenURLAction.swift */,
 			);
 			path = Action;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0B5AAD21EFE3E600F0C730 /* RestRequestMethodDecorator.swift in Sources */,
+				DBF5612421F0B61D00CC3206 /* OpenURLAction.swift in Sources */,
 				DB0B5AA121EFE2EF00F0C730 /* HTTPURLResponse+Status.swift in Sources */,
 				DB99270221F04972006BA6A3 /* RepoTableViewCell.swift in Sources */,
 				DBD89F7D21F01BE800012A9A /* AppState.swift in Sources */,

@@ -21,10 +21,11 @@ func repositoryReducer(action: Action, state: RepositoryScreenState?) -> Reposit
         }
         
         if let repositories = action.repositories {
-            return RepositoryScreenState.init(repositoryStatus: .success(repositories))
+            return RepositoryScreenState(repositoryStatus: .success(repositories))
         }
         
         return nil
+        
     default:
         return nil
     }

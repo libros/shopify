@@ -40,7 +40,7 @@ extension RepoTableData: UITableViewDelegate {
             let htmlURL = URL(string: htmlURLString) else {
             return
         }
-        UIApplication.shared.open(htmlURL, options: [:], completionHandler: nil)
+        store.dispatch(OpenURLAction(url: htmlURL))
     }
 }
 

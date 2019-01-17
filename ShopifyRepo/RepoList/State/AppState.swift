@@ -11,13 +11,14 @@ import ReSwift
 
 struct AppState: StateType {
     var repositoryScreenState: RepositoryScreenState
+    var openURL: URL?
 }
 
 struct RepositoryScreenState: StateType {
-    var repositoryStatus: TimeConsumingActionStatus<[Repository]>
+    var repositoryStatus: RepositoryFetchingStatus<[Repository]>
 }
 
-enum TimeConsumingActionStatus<T> {
+enum RepositoryFetchingStatus<T> {
     case notStarted
     case inProgress
     case success(T)
