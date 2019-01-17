@@ -12,6 +12,8 @@ import ReSwift
 class ShopifyRepoTableViewController: UIViewController {
     
     private let dataDelegate = RepoTableData()
+
+    // MARK: -
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var indicatorView: UIActivityIndicatorView!
@@ -22,57 +24,57 @@ class ShopifyRepoTableViewController: UIViewController {
         fetchRepos()
     }
     
+    @objc private func didPullRefreshControl() {
+        fetchRepos()
+    }
+    
+    // MARK: -
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "GitHub Repositories"
         
-        let addRefreshControl = {
-            self.tableView.refreshControl = UIRefreshControl()
-            self.tableView.refreshControl?.addTarget(self, action: #selector(self.didPullRefreshControl), for: .valueChanged)
-        }
+        {(tableView: UITableView) in
+            tableView.refreshControl = UIRefreshControl()
+            tableView.refreshControl?.addTarget(self, action: #selector(self.didPullRefreshControl), for: .valueChanged)
+        }(tableView);
         
-        let setTableViewDelegate = {
-            self.tableView.delegate = self.dataDelegate
-            self.tableView.dataSource = self.dataDelegate
-        }
-        
-        let setupTableViewCells = {
-            self.tableView.estimatedRowHeight = 60
-            self.tableView.rowHeight = UITableView.automaticDimension
-            self.tableView.register(UINib(nibName: "\(RepoTableViewCell.self)", bundle: nil),
+        {(tableView: UITableView, delegate: UITableViewDelegate, dataSource: UITableViewDataSource ) in
+            tableView.delegate = delegate
+            tableView.dataSource = dataSource
+        }(tableView, dataDelegate, dataDelegate);
+
+        {(tableView: UITableView) in
+            tableView.estimatedRowHeight = 60
+            tableView.rowHeight = UITableView.automaticDimension
+            tableView.register(UINib(nibName: "\(RepoTableViewCell.self)", bundle: nil),
                                     forCellReuseIdentifier: "\(RepoTableViewCell.self)")
-        }
-        
-        addRefreshControl()
-        setTableViewDelegate()
-        setupTableViewCells()
+        }(tableView);
         
         store.subscribe(self) { (subscription: Subscription<AppState>) -> Subscription<RepositoryScreenState> in
             subscription.select { (appState) in
                 appState.repositoryScreenState
             }
         }
-        
-        fetchRepos()
     }
     
-    @objc private func didPullRefreshControl() {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         fetchRepos()
-    }
-    
-    private func fetchRepos() {
-        store.dispatch(fetchGithubRepositories)
     }
 }
 
 extension ShopifyRepoTableViewController: StoreSubscriber {
     
+    private func fetchRepos() {
+        store.dispatch(fetchGithubRepositories)
+    }
+    
     func newState(state: RepositoryScreenState) {
         switch state.repositoryStatus {
         case .success(let repos):
             configDisplay(tableView: tableView, indicatorView: indicatorView, backgroundView: statefulBackgroundView)
-            
             dataDelegate.repositories = repos
             tableView.reloadData()
         case .failure:
@@ -87,32 +89,33 @@ extension ShopifyRepoTableViewController: StoreSubscriber {
             break
         }
     }
-    
-    func configDisplay(tableView: UITableView, indicatorView: UIActivityIndicatorView, backgroundView: UIView) {
-        indicatorView.stopAnimating()
-        indicatorView.isHidden = true
-        tableView.isHidden = false
-        statefulBackgroundView.isHidden = true
-        
-        tableView.refreshControl?.endRefreshing()
-    }
-    
-    func configError(tableView: UITableView, indicatorView: UIActivityIndicatorView, backgroundView: UIView) {
-        statefulBackgroundView.isHidden = false
-        tableView.isHidden = true
-        indicatorView.isHidden = true
-    }
-    
-    func configLoading(tableView: UITableView, indicatorView: UIActivityIndicatorView, backgroundView: UIView) {
-        tableView.isHidden = true
-        backgroundView.isHidden = true
-        indicatorView.isHidden = false
-        indicatorView.startAnimating()
-    }
-    
-    func configRefresh(tableView: UITableView, indicatorView: UIActivityIndicatorView, backgroundView: UIView) {
-        tableView.isHidden = false
-        backgroundView.isHidden = true
-        indicatorView.isHidden = true
-    }
+}
+
+// MARK: -
+
+fileprivate func configDisplay(tableView: UITableView, indicatorView: UIActivityIndicatorView, backgroundView: UIView) {
+    indicatorView.stopAnimating()
+    indicatorView.isHidden = true
+    tableView.isHidden = false
+    backgroundView.isHidden = true
+    tableView.refreshControl?.endRefreshing()
+}
+
+fileprivate func configError(tableView: UITableView, indicatorView: UIActivityIndicatorView, backgroundView: UIView) {
+    backgroundView.isHidden = false
+    tableView.isHidden = true
+    indicatorView.isHidden = true
+}
+
+fileprivate func configLoading(tableView: UITableView, indicatorView: UIActivityIndicatorView, backgroundView: UIView) {
+    tableView.isHidden = true
+    backgroundView.isHidden = true
+    indicatorView.isHidden = false
+    indicatorView.startAnimating()
+}
+
+fileprivate func configRefresh(tableView: UITableView, indicatorView: UIActivityIndicatorView, backgroundView: UIView) {
+    tableView.isHidden = false
+    backgroundView.isHidden = true
+    indicatorView.isHidden = true
 }
