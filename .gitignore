@@ -24,4 +24,5 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 
-
+## carthage
+Carthage/
