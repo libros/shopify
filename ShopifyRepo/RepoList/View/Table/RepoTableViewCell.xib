@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="105" id="KGk-i7-Jjw" customClass="RepoTableViewCell" customModule="ShopifyRepo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="329" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="329" height="89.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="999" verticalCompressionResistancePriority="250" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPY-wo-SSz">
+                        <rect key="frame" x="12" y="12" width="247" height="43.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5z-YG-AiQ">
+                        <rect key="frame" x="275.5" y="36" width="37.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Len-UE-AQG">
+                        <rect key="frame" x="12" y="60.5" width="35.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="S5z-YG-AiQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6sG-Er-rSi"/>
+                    <constraint firstItem="QPY-wo-SSz" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="3/4" id="LS6-Gz-5ro"/>
+                    <constraint firstItem="QPY-wo-SSz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="NSX-BV-wN8"/>
+                    <constraint firstItem="Len-UE-AQG" firstAttribute="top" secondItem="QPY-wo-SSz" secondAttribute="bottom" constant="5" id="VqG-pw-oLg"/>
+                    <constraint firstAttribute="bottom" secondItem="Len-UE-AQG" secondAttribute="bottom" constant="12" id="nu9-7L-5Rp"/>
+                    <constraint firstItem="QPY-wo-SSz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="qJM-tF-4Rz"/>
+                    <constraint firstAttribute="trailing" secondItem="S5z-YG-AiQ" secondAttribute="trailing" constant="16" id="sPm-qt-NQ1"/>
+                    <constraint firstItem="Len-UE-AQG" firstAttribute="leading" secondItem="QPY-wo-SSz" secondAttribute="leading" id="w1v-s3-nha"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="mainLabel" destination="QPY-wo-SSz" id="VRD-x3-Na0"/>
+                <outlet property="startNumberLabel" destination="S5z-YG-AiQ" id="DK7-CE-Lm7"/>
+                <outlet property="timeCreatedLabel" destination="Len-UE-AQG" id="VpV-Ph-SZV"/>
+            </connections>
+            <point key="canvasLocation" x="42.399999999999999" y="62.968515742128943"/>
+        </tableViewCell>
+    </objects>
+</document>

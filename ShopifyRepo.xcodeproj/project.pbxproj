@@ -25,6 +25,9 @@
 		DB582C7A21EECD290059F748 /* ShopifyRepoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB582C7921EECD290059F748 /* ShopifyRepoTests.swift */; };
 		DB8BC81921EECEBF00DBA4D7 /* ShopifyRepoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC81721EECEBF00DBA4D7 /* ShopifyRepoTableViewController.swift */; };
 		DB8BC81A21EECEBF00DBA4D7 /* ShopifyRepoTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB8BC81821EECEBF00DBA4D7 /* ShopifyRepoTableViewController.xib */; };
+		DB9926FF21F048A6006BA6A3 /* TableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9926FE21F048A6006BA6A3 /* TableDelegate.swift */; };
+		DB99270221F04972006BA6A3 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB99270021F04972006BA6A3 /* RepoTableViewCell.swift */; };
+		DB99270321F04972006BA6A3 /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB99270121F04972006BA6A3 /* RepoTableViewCell.xib */; };
 		DBD89F6721F005AE00012A9A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD89F6521F005AE00012A9A /* User.swift */; };
 		DBD89F6821F005AE00012A9A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD89F6621F005AE00012A9A /* Repository.swift */; };
 		DBD89F7221F016FD00012A9A /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD89F7121F016FD00012A9A /* ReSwift.framework */; };
@@ -83,6 +86,9 @@
 		DB582C7B21EECD290059F748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB8BC81721EECEBF00DBA4D7 /* ShopifyRepoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopifyRepoTableViewController.swift; sourceTree = "<group>"; };
 		DB8BC81821EECEBF00DBA4D7 /* ShopifyRepoTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopifyRepoTableViewController.xib; sourceTree = "<group>"; };
+		DB9926FE21F048A6006BA6A3 /* TableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDelegate.swift; sourceTree = "<group>"; };
+		DB99270021F04972006BA6A3 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
+		DB99270121F04972006BA6A3 /* RepoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoTableViewCell.xib; sourceTree = "<group>"; };
 		DBD89F6521F005AE00012A9A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DBD89F6621F005AE00012A9A /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		DBD89F7121F016FD00012A9A /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 			children = (
 				DB8BC81721EECEBF00DBA4D7 /* ShopifyRepoTableViewController.swift */,
 				DB8BC81821EECEBF00DBA4D7 /* ShopifyRepoTableViewController.xib */,
+				DB9926FD21F04895006BA6A3 /* Table */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -242,6 +249,16 @@
 			path = ShopifyRepoTests;
 			sourceTree = "<group>";
 		};
+		DB9926FD21F04895006BA6A3 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				DB9926FE21F048A6006BA6A3 /* TableDelegate.swift */,
+				DB99270021F04972006BA6A3 /* RepoTableViewCell.swift */,
+				DB99270121F04972006BA6A3 /* RepoTableViewCell.xib */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
 		DBD89F7621F01A7A00012A9A /* State */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +370,7 @@
 				DB582C6F21EECD280059F748 /* LaunchScreen.storyboard in Resources */,
 				DB582C6C21EECD280059F748 /* Assets.xcassets in Resources */,
 				DB8BC81A21EECEBF00DBA4D7 /* ShopifyRepoTableViewController.xib in Resources */,
+				DB99270321F04972006BA6A3 /* RepoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +390,7 @@
 			files = (
 				DB0B5AAD21EFE3E600F0C730 /* RestRequestMethodDecorator.swift in Sources */,
 				DB0B5AA121EFE2EF00F0C730 /* HTTPURLResponse+Status.swift in Sources */,
+				DB99270221F04972006BA6A3 /* RepoTableViewCell.swift in Sources */,
 				DBD89F7D21F01BE800012A9A /* AppState.swift in Sources */,
 				DB0B5AA821EFE3A100F0C730 /* RestRequest.swift in Sources */,
 				DBD89F8021F01D8700012A9A /* RepositoryReducer.swift in Sources */,
@@ -389,6 +408,7 @@
 				DB0B5AAA21EFE3C600F0C730 /* GithubRequest.swift in Sources */,
 				DB0B5A9021EEED1500F0C730 /* Response.swift in Sources */,
 				DBD89F7921F01AA600012A9A /* LoadRepositoryAction.swift in Sources */,
+				DB9926FF21F048A6006BA6A3 /* TableDelegate.swift in Sources */,
 				DB0B5A8521EED24F00F0C730 /* URLSessionDataTaskProtocol.swift in Sources */,
 				DBD89F6821F005AE00012A9A /* Repository.swift in Sources */,
 			);

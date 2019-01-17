@@ -22,7 +22,8 @@ struct Repository {
     let cloneURL: String?
     let htmlURL: String?
     let size: Int?
-    let lastPush: Date?
+    let createdTime: Date?
+    let stargazersCount: Int?
 }
 
 extension Repository: Codable {
@@ -40,6 +41,7 @@ extension Repository: Codable {
         case cloneURL = "clone_url"
         case htmlURL = "html_url"
         case size
-        case lastPush = "pushed_at"
+        case createdTime = "created_at"
+        case stargazersCount = "stargazers_count"
     }
 }

@@ -9,24 +9,22 @@
 import Foundation
 import ReSwift
 
-struct LoadRepositoryAction: Action {
-    let owner: String
-    let page: UInt = 1
-    let page_size: UInt = 100
-}
-
 func fetchGithubRepositories(state: AppState, store: Store<AppState>) -> Action? {
-    _ = GithubService().repos(owner: "Shopify", completion: { (repositories) in
-        DispatchQueue.main.async {
-            switch repositories {
-            case .failure(let error):
-                store.dispatch(RepositoryLoadedAction(repositories: nil, error: error, inProgress: false))
-            case let .success(repos):
-                print(repos.map { $0.fullName })
-                store.dispatch(RepositoryLoadedAction(repositories: repos, error: nil, inProgress: false))
+    switch state.repositoryScreenState.repositoryStatus {
+    case .inProgress:
+        return nil
+    default:
+        _ = GithubService().repos(owner: "Shopify", completion: { (repositories) in
+            DispatchQueue.main.async {
+                switch repositories {
+                case .failure(let error):
+                    store.dispatch(RepositoryLoadedAction(repositories: nil, error: error, inProgress: false))
+                case let .success(repos):
+                    store.dispatch(RepositoryLoadedAction(repositories: repos, error: nil, inProgress: false))
+                }
             }
-        }
-    }, session: URLSession.shared)
+        }, session: URLSession.shared)
+    }
     
     return RepositoryLoadedAction(repositories: nil, error: nil, inProgress: true)
 }

@@ -11,8 +11,6 @@ import ReSwift
 
 func repositoryReducer(action: Action, state: RepositoryScreenState?) -> RepositoryScreenState? {
     switch action {
-    case _ as LoadRepositoryAction:
-        return nil
     case let action as RepositoryLoadedAction:
         if action.inProgress {
             return RepositoryScreenState(repositoryStatus: .inProgress)
